@@ -17,8 +17,8 @@ def kd(data, val):
 		rsv *= 100
 		k = (k*2 + rsv*1) / 3
 		d = (d*2 + k*1) / 3
-	if k < 20 and d < 20: return 1
-	elif k > 80 and d > 80: return -1
+	if k < (100-val) and d < (100-val): return 1
+	elif k > val and d > val: return -1
 	else: return 0
 
 def vol(data, val):
